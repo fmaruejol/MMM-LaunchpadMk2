@@ -1,0 +1,138 @@
+.launchpad {
+  opacity: 0.8;
+}
+
+.launchpad.launchpad-small .launchpad-button {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+}
+
+.launchpad.launchpad-medium .launchpad-button {
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+}
+
+.launchpad.launchpad-large .launchpad-button {
+  width: 32px;
+  height: 32px;
+  margin: 6px;
+}
+
+.launchpad.debug {
+  cursor: auto;
+}
+
+.launchpad.debug .launchpad-button {
+  cursor: pointer;
+}
+
+.launchpad-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.launchpad-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75em;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+.launchpad-button.round {
+  border-radius: 50%;
+}
+
+.launchpad-button.square {
+  border-radius: 3px;
+}
+
+.launchpad-button.pressed {
+  background: white;
+}
+
+.launchpad-button.pressed .launchpad-button-text {
+  color: black;
+}
+
+.launchpad-button.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.launchpad-button-background {
+  width: 100%;
+  height: 100%;
+}
+
+.launchpad-button.pulse .launchpad-button-background {
+  animation: pulse 2s infinite;
+}
+
+.launchpad-button.flash .launchpad-button-background {
+  animation: flash 2s infinite;
+}
+
+.launchpad-button-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 0.4em;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bindings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.5em;
+}
+
+.bind {
+  text-align: left;
+  line-height: 1.25em;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
