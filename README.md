@@ -50,7 +50,7 @@ var config = {
                 inPort: 0,
                 outPort: 1,
                 bindings: [
-                    	{
+                      {
                         button: 89,
                         color: 70,
                         notification: "LAUNCHPAD_TOGGLE_MODE",
@@ -84,19 +84,19 @@ var config = {
 | `debug`    | *Optional* - Enable debug mode. <br>**Type:** `boolean`<br>**Default:** `false`                                                                 |
 | `virtual`  | *Optional* - Emulate a Launchpad even if you haven't one.<br>**Type:** `boolean`<br>**Default:** `false`                                        |
 | `size`     | *Optional* - Size of the HTML representation <br>**Type:** `string`<br>**Default:** `"medium"`<br>**Options:** `"small"`, `"medium"`, `"large"` |
-| `inPort`   | *Optional* - The midi input port the Launchpad use. <br>**Type:** `number`                                                                      |
-| `outPort`  | *Optional* - The midi output port the Launchpad use. <br>**Type:** `number`                                                                     |
+| `inPort`   | *Optional* - The midi input port the Launchpad use. <br>**Type:** `number`<br>**Default:** `0`                                                                    |
+| `outPort`  | *Optional* - The midi output port the Launchpad use. <br>**Type:** `number`<br>**Default:** `0`                                                                     |
 | `bindings` | *Optional* - An array of [bindings options](#binding-options). <br>**Type:** `array`<br>**Default:** `[]`                                       |
 
 ### Binding Options
 
-| Option         | Details                                                                                                                       |
-|----------------|-------------------------------------------------------------------------------------------------------------------------------|
-| `button`       | **Required** - The button where the binding is mapped. <br>**Type:** `number`                                                 |
-| `notification` | **Required** - The notification id to bind. <br>**Type:** `string`<br>                                                        |
-| `payload`      | *Optional* - The notification payload.<br>**Type:** `boolean`<br>**Default:** `undefined`                                     |
-| `color`        | *Optional* - Color of the button (between 0 and 127) <br>**Type:** `number`                                                   |
-| `mode`         | *Optional* - Mode of butotn. <br>**Type:** `string`<br>**Default:** `static`<br>**Options:** `"static"`, `"pulse"`, `"flash"` |
+| Option         | Details                                                                                                                        |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------|
+| `button`       | **Required** - The button where the binding is mapped. <br>**Type:** `number`                                                  |
+| `notification` | **Required** - The notification id to bind. <br>**Type:** `string`<br>                                                         |
+| `payload`      | *Optional* - The notification payload.<br>**Type:** `boolean`<br>**Default:** `undefined`                                      |
+| `color`        | *Optional* - Color of the button (between 0 and 127, [colors table here](images/launchpad-colors.png)). <br>**Type:** `number` |
+| `mode`         | *Optional* - Mode of button. <br>**Type:** `string`<br>**Default:** `static`<br>**Options:** `"static"`, `"pulse"`, `"flash"`  |
 
 ### Special bind
 
